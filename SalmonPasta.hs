@@ -22,7 +22,7 @@ defrost (action, ingredient) =
   (action ++ "Defrost the " ++ ingredient ++ how, result)
   where 
     result = (sentence . filter (/= "frozen") . words) ingredient 
-    how = if (result == "spinach ") then " on low heat. "
+    how = if (result == "spinach ") then "on low heat . "
     else ". "
 
 half (action, ingredient) = 
@@ -62,13 +62,13 @@ buy feature ingredient =
 serve (action, ingredient) = 
   action ++ "Done ! Enjoy your lovely " ++ ingredient ++ ". "
 
-recipe = 
-  serve (add "pepper, salt and Italian herbs "
-    (mix (cook (buy "250 grams " "pasta "))
-      (mix (chop (buy "2 ounce " "smoked salmon "))
-        (mix (fry (chop (buy "a nice " "onion "))) 
-          (mix (defrost (buy "2 ounce " "frozen spinach "))
-            (buy "a ready-made cup of " "garlic herbed cheese "))))))
+recipe = serve
+            $ add "pepper, salt and Italian herbs "
+            $ mix (cook (buy "250 grams " "pasta "))
+            $ mix (chop (buy "2 ounce " "smoked salmon "))
+            $ mix (fry (chop (buy "a nice " "onion ")))
+            $ mix (defrost (buy "2 ounce " "frozen spinach "))
+            $ buy "a ready-made cup of " "garlic herbed cheese "
 
 -- Tip: also good without onion, and faster ;-)
 

@@ -24,7 +24,7 @@ ontdooi (actie, ingredient) =
   (actie ++ "Ontdooi de " ++ ingredient ++ hoe, resultaat)
   where 
     resultaat = (zin . filter (/= "bevroren") . woorden) ingredient 
-    hoe = if (resultaat == "spinazie ") then " op laag vuur. "
+    hoe = if (resultaat == "spinazie ") then "op laag vuur . "
     else ". "
 
 halveer (actie, ingredient) = 
@@ -64,13 +64,13 @@ koop eigenschap ingredient =
 dienop (actie, ingredient) = 
   actie ++ "Klaar ! Geniet van je heerlijke " ++ ingredient ++ ". "
 
-recept = 
-  dienop (voegtoe "peper, zout en Italiaanse kruiden "
-    (meng (kook (koop "250 gram " "pasta "))
-      (meng (snipper (koop "200 gram " "gerookte zalm "))
-        (meng (fruit (snipper (koop "een mooie " "ui "))) 
-          (meng (ontdooi (koop "200 gram " "bevroren spinazie "))
-            (koop "een kant-en-klaar bakje " "kruidenkaas "))))))
+recept = dienop 
+    $ voegtoe "peper, zout en Italiaanse kruiden "
+    $ meng (kook (koop "250 gram " "pasta "))
+    $ meng (snipper (koop "200 gram " "gerookte zalm "))
+    $ meng (fruit (snipper (koop "een mooie " "ui "))) 
+    $ meng (ontdooi (koop "200 gram " "bevroren spinazie "))
+    $ koop "een kant-en-klaar bakje " "kruidenkaas "
 
 -- Tip: ook lekker zonder ui, en sneller ;-)
 
