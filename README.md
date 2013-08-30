@@ -3,14 +3,14 @@ The FokkingCook
 
 The "FokkingCook" is an ode to the long and successful carreer of
 Dr. Maarten Fokkinga, and his love for elegant algorithms and
-functional programming. Thanks to Jan Kuper for coming up with
-this idea. Fokkingcook generates a recipe for salmon pasta 
-using the principle of algorithmic cooking, i.e., recipes are
-really algorithms for cooking.
+functional programming. Fokkingcook demonstrates the principle of 
+algorithmic cooking, i.e., recipes are really algorithms for 
+cooking. Everything appropriately formalised in Haskell.
 
-Author: Djoerd Hiemstra,
+Authors: Jan Kuper and Djoerd Hiemstra,
 Date: 30 August 2013.
 
-* fokkingcook.hs: the English version
-* fokkingkok.hs: the original Dutch version
+* CurriedBananas.hs: Curried Bananas (no brackets or barbed wire) 
+* SalmonPasta.hs:    Salmon Pasta
+* ZalmPasta.hs:      Salmon Pasta for Dutch cooks
 
