@@ -1,11 +1,10 @@
-module Main
+module SalmonPasta
 where
 import Data.Char
 
 -- The "FokkingCook" is an ode to the long and successful carreer of
 -- Dr. Maarten Fokkinga, and his love for elegant algorithms and 
--- functional programming. Thanks to Jan Kuper for coming up with 
--- this idea.
+-- functional programming. 
 --
 -- Author: Djoerd Hiemstra
 -- Date:  30 August 2013

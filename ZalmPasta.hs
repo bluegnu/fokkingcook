@@ -1,10 +1,10 @@
-module Main
+module ZalmPasta
 where
 import Data.Char
 
 -- De "FokkingKok" is een ode aan de lange en succesvolle carriere van 
 -- Dr. Maarten Fokkinga, en zijn liefde voor elegante algoritmen en
--- functioneel programmeren. Met dank aan Jan Kuper voor dit idee.
+-- functioneel programmeren. 
 --
 -- Auteur: Djoerd Hiemstra
 -- Datum:  30 augustus 2013
