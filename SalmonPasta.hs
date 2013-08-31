@@ -1,6 +1,4 @@
-module SalmonPasta
-where
-import Data.Char
+module SalmonPasta where
 
 -- The "FokkingCook" is an ode to the long and successful carreer of
 -- Dr. Maarten Fokkinga, and his love for elegant algorithms and 
@@ -38,9 +36,9 @@ chop (action, ingredient) =
       show (number * 2) ++ " parts " ++ cut)
   else (action ++ "That's small enough . ", "chopped " ++ cut)
   where
-    count = (head . words) ingredient
-    number = if isDigit(head count) then read count
-    else 1
+    count = reads ingredient :: [(Int, String)] 
+    number = if null count then 1
+    else (fst . head) count
     cut = (sentence . tail . tail . words) ingredient
 
 mix (action1, ingredient1) (action2, ingredient2) = 

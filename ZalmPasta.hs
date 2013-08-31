@@ -1,6 +1,4 @@
-module ZalmPasta
-where
-import Data.Char
+module ZalmPasta where
 
 -- De "FokkingKok" is een ode aan de lange en succesvolle carriere van 
 -- Dr. Maarten Fokkinga, en zijn liefde voor elegante algoritmen en
@@ -40,9 +38,9 @@ snipper (actie, ingredient) =
       show (aantal * 2) ++ " delen " ++ gesneden)
   else (actie ++ "Dat is klein genoeg . ", "versnipperde " ++ gesneden)
   where
-    tellen = (head . woorden) ingredient
-    aantal = if isDigit(head tellen) then read tellen
-    else 1
+    tellen = reads ingredient :: [(Int, String)]
+    aantal = if null tellen then 1
+    else (fst . head) tellen
     gesneden = (zin . tail . tail . woorden) ingredient
 
 meng (actie1, ingredient1) (actie2, ingredient2) = 
